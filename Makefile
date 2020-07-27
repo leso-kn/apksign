@@ -25,6 +25,7 @@ apksign: main.go
 
 deps: $(dep_android)/README.md \
 	  $(dep_log)/README.md
+	GOBIN=$$PWD go get ./...
 
 $(dep_android)/README.md:
 	$(LOG_DEP) Fetching dependency 'android'
