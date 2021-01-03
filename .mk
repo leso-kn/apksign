@@ -13,11 +13,11 @@ LOG_APKSIGN = printf "[\033[1;36mapksign\033[0m] "; echo
 
 ##
 
-all: content/binaries/apksign
+all: $(out)/bin/apksign
 
-composition-targets += content/binaries/apksign
+composition-targets += $(out)/bin/apksign
 
-content/binaries/apksign: src/apksign/main.go
+$(out)/bin/apksign: src/apksign/main.go
 	# Test for missing go dependencies
 	(cd src/apksign && go vet 2>/dev/null) || make -f $(MAKEFILE_LIST) deps
 	 
