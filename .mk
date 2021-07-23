@@ -3,6 +3,7 @@ ifndef VERBOSE
 endif
 
 GOPATH = $(shell go env GOPATH)
+export GO111MODULE = auto
 
 dep_repo = https://github.com/morrildl
 
